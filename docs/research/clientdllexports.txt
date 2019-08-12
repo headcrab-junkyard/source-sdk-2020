@@ -1,0 +1,38 @@
+# engine -> client dll
+
+VMaterialSystemStub001+
+VScriptManager009+
+ServerUploadGameStats001+
+XboxSystemInterface002 // TODO
+BlackBoxVersion001+
+SceneFileCache002+
+VBik001+
+VAvi001+
+InputSystemVersion001+
+VSoundEmitter003+
+GAMEEVENTSMANAGER002+
+VENGINE_GAMEUIFUNCS_VERSION005+
+VEngineRandom001+
+VFileSystem017+
+IEngineSoundClient003+
+StaticPropMgrClient005 // TODO
+VEngineShadowMgr002+
+SpatialPartition001+
+VEngineClientStringTable001+
+VEngineVGui001+
+VModelInfoClient004+
+VDataCache003+
+VDebugOverlay004+
+VEngineRenderView013+
+FileLoggingListener001+
+EngineTraceClient004+
+VEngineEffects001+
+VEngineModel016+
+VEngineClient015+ // TODO
+GameClientExports001+
+VClientDllSharedAppSystems001+
+VClient016+
+VCLIENTMATERIALSYSTEM001+
+VClientEntityList003+
+ClientLeafSystem002+
+ClientAlphaPropertyMgrV001+
