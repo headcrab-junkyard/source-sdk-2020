@@ -29,10 +29,30 @@ EngineTraceClient004+
 VEngineEffects001+
 VEngineModel016+
 VEngineClient015+ // TODO
-GameClientExports001+
-VClientDllSharedAppSystems001+
-VClient016+
 VCLIENTMATERIALSYSTEM001+
 VClientEntityList003+
 ClientLeafSystem002+
 ClientAlphaPropertyMgrV001+
+
+# gameui -> engine
+
+RunGameEngine005
+GameConsole004
+VGuiModuleLoader003
+GameUI011
+
+# client dll -> engine
+
+GameClientExports001+
+VClientDllSharedAppSystems001+
+GameMovement001
+VClientPrediction001
+VClient016+
+VCLIENTMATERIALSYSTEM001
+IEffects001
+VCLIENTTOOLS001
+VParticleSystemQuery004
+VClientEntityList003
+ClientRenderTargets001
+ClientLeafSystem002
+ClientAlphaPropertyMgrV001
