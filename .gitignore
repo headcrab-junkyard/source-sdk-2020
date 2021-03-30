@@ -1,0 +1,12 @@
+merge
+build
+bin
+
+# temp
+game/ep2
+game/episodic
+game/mod_hl2
+game/mod_hl2mp
+game/mod_episodic
+game/hl2
+game/lostcoast
