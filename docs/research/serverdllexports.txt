@@ -1,36 +1,7 @@
-# engine -> server dll
-
-VDebugOverlay004+
-VENGINE_GAMEUIFUNCS_VERSION005+
-VSERVERENGINETOOLS001+
-VEngineVGui001+
-VScriptManager009+
-XboxSystemInterface002 // TODO
-BlackBoxVersion001+
-SceneFileCache002+
-ISERVERPLUGINHELPERS001+
-ServerUploadGameStats001+
-VSoundEmitter003+
-VDataCache003+
-GAMEEVENTSMANAGER002+
-VFileSystem017+
-FileLoggingListener001+
-EngineTraceServer004+
-VModelInfoServer002+
-SpatialPartition001+
-IEngineSoundServer003+
-VEngineRandom001+
-StaticPropMgrServer002+
-VEngineServerStringTable001+
-VoiceServer002+
-VEngineServer022+
-
-# server dll -> engine
-
 PlayerInfoManager001
 PlayerInfoManager002
 GameMovement001
-IEffects001
+IEffects001+
 BotManager001
 ServerGameEnts001+
 ServerGameClients004+
@@ -38,5 +9,5 @@ VServerDllSharedAppSystems001+
 ServerGameTags001+
 ServerGameDLL005+
 PluginHelpersCheck001
-HLTVDirector001
+HLTVDirector001+
 VSERVERTOOLS001
