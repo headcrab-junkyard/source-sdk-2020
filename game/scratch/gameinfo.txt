@@ -1,21 +1,23 @@
 "GameInfo"
 {
-	"game"		"ASW Scratch"
-	"title"		"    "	// asw - leave this blank as we have a texture logo
-	"type"		"multiplayer_only"
-	GameData	"swarm.fgd"
-	InstancePath "tilegen/instances/"
+	game			"P2 Scratch"
+	title			"    "	// p2 - leave this blank as we have a texture logo
+	type			"multiplayer_only"
+	GameData		"portal2.fgd"
+	InstancePath	"tilegen/instances/"
 	
 	SupportsDX8     0
+	SupportsXbox360	1
 	
-	"FileSystem"
+	FileSystem
 	{
-		"SteamAppId"	"630"
-		"ToolsAppId"	"211"
+		SteamAppId				620
+		ToolsAppId				211
 		
 		"SearchPaths"
 		{
 			"Game"	"|gameinfo_path|."
+			"Game"	"portal2"
 			"Game"	"swarm"
 			"Game"	"swarm_tempcontent"
 			"Game"	"swarm_base"
