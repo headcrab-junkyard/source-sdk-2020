@@ -30,7 +30,7 @@ class ICollideable;
 //-----------------------------------------------------------------------------
 // Interface versions for static props
 //-----------------------------------------------------------------------------
-#define INTERFACEVERSION_STATICPROPMGR_CLIENT		"StaticPropMgrClient004" // TODO: 005 for Portal 2
+#define INTERFACEVERSION_STATICPROPMGR_CLIENT		"StaticPropMgrClient005"
 #define INTERFACEVERSION_STATICPROPMGR_SERVER		"StaticPropMgrServer002"
 
 
@@ -54,7 +54,7 @@ public:
 	virtual ICollideable *GetStaticPropByIndex( int propIndex ) = 0;
 };
 
-abstract_class IStaticPropMgrClient : public IStaticPropMgr
+abstract_class IStaticPropMgrClient004 : public IStaticPropMgr
 {
 public:
 	// Recomputes the static prop opacity given a view origin
@@ -81,6 +81,11 @@ public:
 	virtual void DrawStaticProps( IClientRenderable **pProps, int count, bool bShadowDepth, bool drawVCollideWireframe ) = 0;
 	virtual void AddColorDecalToStaticProp( Vector const& rayStart, Vector const& rayEnd,
 		int staticPropIndex, int decalIndex, bool doTrace, trace_t& tr, bool bUseColor, Color cColor ) = 0;
+};
+
+abstract_class IStaticPropMgrClient : public IStaticPropMgrClient004
+{
+	// TODO
 };
 
 class IStaticPropMgrServer : public IStaticPropMgr
