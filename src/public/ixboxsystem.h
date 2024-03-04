@@ -29,7 +29,7 @@ typedef void* XboxHandle_t;
 //-----------------------------------------------------------------------------
 // Xbox system interface
 //-----------------------------------------------------------------------------
-abstract_class IXboxSystem
+abstract_class IXboxSystem001
 {
 public:
 	virtual AsyncHandle_t	CreateAsyncHandle( void ) = 0;
@@ -40,7 +40,7 @@ public:
 	// Save/Load
 	virtual void			GetModSaveContainerNames( const char *pchModName, const wchar_t **ppchDisplayName, const char **ppchName ) = 0;
 	virtual uint			GetContainerRemainingSpace( void ) = 0;
-	virtual bool			DeviceCapacityAdequate( DWORD nStorageID, const char *pModName ) = 0;
+	virtual bool			DeviceCapacityAdequate( int iController, DWORD nStorageID, const char *pModName ) = 0;
 	virtual DWORD			DiscoverUserData( DWORD nUserID, const char *pModName ) = 0;
 
 	// XUI
@@ -77,6 +77,11 @@ public:
 	virtual void			CloseContainers( void ) = 0;
 };
 
-#define XBOXSYSTEM_INTERFACE_VERSION	"XboxSystemInterface001" // TODO: 002 for Portal 2
+abstract_class IXboxSystem : public IXboxSystem001
+{
+	// TODO
+};
+
+#define XBOXSYSTEM_INTERFACE_VERSION	"XboxSystemInterface002"
 
 #endif // IXBOXSYSTEM_H
