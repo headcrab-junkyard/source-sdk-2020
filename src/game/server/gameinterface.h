@@ -230,7 +230,7 @@ bool IsEngineThreaded();
 class CServerGameTags : public IServerGameTags
 {
 public:
-	virtual void GetTaggedConVarList( KeyValues *pCvarTagList );
+	virtual void GetTaggedConVarList( KeyValues *pCvarTagList ) override;
 
 };
 EXPOSE_SINGLE_INTERFACE( CServerGameTags, IServerGameTags, INTERFACEVERSION_SERVERGAMETAGS );

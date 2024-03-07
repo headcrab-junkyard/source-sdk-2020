@@ -2378,11 +2378,11 @@ class CServerGameEnts : public IServerGameEnts
 {
 public:
 	virtual void			SetDebugEdictBase(edict_t *base);
-	virtual void			MarkEntitiesAsTouching( edict_t *e1, edict_t *e2 );
-	virtual void			FreeContainingEntity( edict_t * ); 
-	virtual edict_t*		BaseEntityToEdict( CBaseEntity *pEnt );
-	virtual CBaseEntity*	EdictToBaseEntity( edict_t *pEdict );
-	virtual void			CheckTransmit( CCheckTransmitInfo *pInfo, const unsigned short *pEdictIndices, int nEdicts );
+	virtual void			MarkEntitiesAsTouching( edict_t *e1, edict_t *e2 ) override;
+	virtual void			FreeContainingEntity( edict_t * ) override;
+	virtual edict_t*		BaseEntityToEdict( CBaseEntity *pEnt ) override;
+	virtual CBaseEntity*	EdictToBaseEntity( edict_t *pEdict ) override;
+	virtual void			CheckTransmit( CCheckTransmitInfo *pInfo, const unsigned short *pEdictIndices, int nEdicts ) override;
 };
 EXPOSE_SINGLE_INTERFACE(CServerGameEnts, IServerGameEnts, INTERFACEVERSION_SERVERGAMEENTS);
 

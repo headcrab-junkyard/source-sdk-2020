@@ -45,15 +45,15 @@ public:
 	CHLTVDirector();
 	virtual ~CHLTVDirector();
 
-	virtual void SetHLTVServer( IHLTVServer *hltv ); // give the director an HLTV interface 
-	IHLTVServer* GetHLTVServer( void ); 
-	int		GetDirectorTick( void );	// get current broadcast tick from director
-	int		GetPVSEntity( void ); // get current view entity (PVS)
-	Vector	GetPVSOrigin( void ); // get current PVS origin, if PVS entity is 0
-	float	GetDelay( void ); // returns current delay in seconds
-	bool	IsActive( void );
+	virtual void SetHLTVServer( IHLTVServer *hltv ) override; // give the director an HLTV interface 
+	IHLTVServer* GetHLTVServer( void ) override; 
+	int		GetDirectorTick( void ) override;	// get current broadcast tick from director
+	int		GetPVSEntity( void ) override; // get current view entity (PVS)
+	Vector	GetPVSOrigin( void ) override; // get current PVS origin, if PVS entity is 0
+	float	GetDelay( void ) override; // returns current delay in seconds
+	bool	IsActive( void ) override;
 
-	virtual const char** GetModEvents(); // returns list of event names forwarded to HLTV clients
+	virtual const char** GetModEvents() override; // returns list of event names forwarded to HLTV clients
 
 	void	BuildCameraList( void );
 		

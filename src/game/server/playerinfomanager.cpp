@@ -56,7 +56,7 @@ namespace
 	class CPlayerInfoManager_V1: public IPlayerInfoManager_V1
 	{
 	public:
-		virtual IPlayerInfo_V1 *GetPlayerInfo( edict_t *pEdict );
+		virtual IPlayerInfo_V1 *GetPlayerInfo( edict_t *pEdict ) override;
 	};
 
 	static CPlayerInfoManager_V1 s_PlayerInfoManager_V1;

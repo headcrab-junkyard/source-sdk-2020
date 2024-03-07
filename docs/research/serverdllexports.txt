@@ -1,13 +1,19 @@
 PlayerInfoManager001+
 PlayerInfoManager002+
-GameMovement001+
+
+GameMovement001+ // TODO
+
 IEffects001+
 BotManager001+
-ServerGameEnts001+
-ServerGameClients004+
+
+ServerGameEnts001+ // TODO
+ServerGameClients004+ // TODO
+
 VServerDllSharedAppSystems001+
 ServerGameTags001+
-ServerGameDLL005+
-PluginHelpersCheck001+ // TODO
+
+ServerGameDLL005+ // TODO
+
+PluginHelpersCheck001+
 HLTVDirector001+
-VSERVERTOOLS001+ // TODO
+VSERVERTOOLS001+

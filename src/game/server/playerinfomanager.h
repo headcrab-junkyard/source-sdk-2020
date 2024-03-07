@@ -18,15 +18,15 @@
 class CPlayerInfoManager: public IPlayerInfoManager
 {
 public:
-	virtual IPlayerInfo *GetPlayerInfo( edict_t *pEdict );
-	virtual CGlobalVars *GetGlobalVars();
+	virtual IPlayerInfo *GetPlayerInfo( edict_t *pEdict ) override;
+	virtual CGlobalVars *GetGlobalVars() override;
 };
 
 class CPluginBotManager: public IBotManager
 {
 public:
-	virtual IBotController *GetBotController( edict_t *pEdict );
-	virtual edict_t *CreateBot( const char *botname );
+	virtual IBotController *GetBotController( edict_t *pEdict ) override;
+	virtual edict_t *CreateBot( const char *botname ) override;
 };
 
 #endif

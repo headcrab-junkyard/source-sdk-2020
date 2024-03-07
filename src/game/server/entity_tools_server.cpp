@@ -43,27 +43,27 @@ class CServerTools : public IServerTools
 {
 public:
 	// Inherited from IServerTools
-	virtual IServerEntity *GetIServerEntity( IClientEntity *pClientEntity );
-	virtual bool GetPlayerPosition( Vector &org, QAngle &ang, IClientEntity *pClientPlayer = NULL );
-	virtual bool SnapPlayerToPosition( const Vector &org, const QAngle &ang, IClientEntity *pClientPlayer = NULL );
-	virtual int GetPlayerFOV( IClientEntity *pClientPlayer = NULL );
-	virtual bool SetPlayerFOV( int fov, IClientEntity *pClientPlayer = NULL );
-	virtual bool IsInNoClipMode( IClientEntity *pClientPlayer = NULL );
-	virtual void *FirstEntity( void );
-	virtual void *NextEntity( void *pEntity );
-	virtual void *FindEntityByHammerID( int iHammerID );
-	virtual bool GetKeyValue( void *pEntity, const char *szField, char *szValue, int iMaxLen );
-	virtual bool SetKeyValue( void *pEntity, const char *szField, const char *szValue );
-	virtual bool SetKeyValue( void *pEntity, const char *szField, float flValue );
-	virtual bool SetKeyValue( void *pEntity, const char *szField, const Vector &vecValue );
-	virtual void *CreateEntityByName( const char *szClassName );
-	virtual void DispatchSpawn( void *pEntity );
-	virtual void ReloadParticleDefintions( const char *pFileName, const void *pBufData, int nLen );
-	virtual void AddOriginToPVS( const Vector &org );
-	virtual bool DestroyEntityByHammerId( int iHammerID );
-	virtual bool RespawnEntitiesWithEdits( CEntityRespawnInfo *pInfos, int nInfos );
-	virtual void MoveEngineViewTo( const Vector &vPos, const QAngle &vAngles );
-	virtual void RemoveEntity( int nHammerID );
+	virtual IServerEntity *GetIServerEntity( IClientEntity *pClientEntity ) override;
+	virtual bool GetPlayerPosition( Vector &org, QAngle &ang, IClientEntity *pClientPlayer = NULL ) override;
+	virtual bool SnapPlayerToPosition( const Vector &org, const QAngle &ang, IClientEntity *pClientPlayer = NULL ) override;
+	virtual int GetPlayerFOV( IClientEntity *pClientPlayer = NULL ) override;
+	virtual bool SetPlayerFOV( int fov, IClientEntity *pClientPlayer = NULL ) override;
+	virtual bool IsInNoClipMode( IClientEntity *pClientPlayer = NULL ) override;
+	virtual void *FirstEntity( void ) override;
+	virtual void *NextEntity( void *pEntity ) override;
+	virtual void *FindEntityByHammerID( int iHammerID ) override;
+	virtual bool GetKeyValue( void *pEntity, const char *szField, char *szValue, int iMaxLen ) override;
+	virtual bool SetKeyValue( void *pEntity, const char *szField, const char *szValue ) override;
+	virtual bool SetKeyValue( void *pEntity, const char *szField, float flValue ) override;
+	virtual bool SetKeyValue( void *pEntity, const char *szField, const Vector &vecValue ) override;
+	virtual void *CreateEntityByName( const char *szClassName ) override;
+	virtual void DispatchSpawn( void *pEntity ) override;
+	virtual void ReloadParticleDefintions( const char *pFileName, const void *pBufData, int nLen ) override;
+	virtual void AddOriginToPVS( const Vector &org ) override;
+	virtual bool DestroyEntityByHammerId( int iHammerID ) override;
+	virtual bool RespawnEntitiesWithEdits( CEntityRespawnInfo *pInfos, int nInfos ) override;
+	virtual void MoveEngineViewTo( const Vector &vPos, const QAngle &vAngles ) override;
+	virtual void RemoveEntity( int nHammerID ) override;
 };
 
 

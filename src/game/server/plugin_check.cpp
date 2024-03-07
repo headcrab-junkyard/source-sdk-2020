@@ -16,7 +16,7 @@
 class CPluginHelpersCheck : public IPluginHelpersCheck
 {
 public:
-	virtual bool CreateMessage( const char *plugin, edict_t *pEntity, DIALOG_TYPE type, KeyValues *data );
+	virtual bool CreateMessage( const char *plugin, edict_t *pEntity, DIALOG_TYPE type, KeyValues *data ) override;
 };
 
 CPluginHelpersCheck s_PluginCheck;
