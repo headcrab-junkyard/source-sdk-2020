@@ -35,9 +35,9 @@ class CBaseClientRenderTargets : public IClientRenderTargets
 	DECLARE_CLASS_GAMEROOT( CBaseClientRenderTargets, IClientRenderTargets );
 public:
 	// Interface called by engine during material system startup.
-	virtual void InitClientRenderTargets ( IMaterialSystem* pMaterialSystem, IMaterialSystemHardwareConfig* pHardwareConfig );
+	virtual void InitClientRenderTargets ( IMaterialSystem* pMaterialSystem, IMaterialSystemHardwareConfig* pHardwareConfig ) override;
 	// Shutdown all custom render targets here.
-	virtual void ShutdownClientRenderTargets ( void );
+	virtual void ShutdownClientRenderTargets ( void ) override;
 
 protected:
 	void SetupClientRenderTargets( IMaterialSystem* pMaterialSystem, IMaterialSystemHardwareConfig* pHardwareConfig, int iWaterTextureSize = 1024, int iCameraTextureSize = 256 );

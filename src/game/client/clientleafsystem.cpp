@@ -97,8 +97,8 @@ public:
 
 // Methods of IClientAlphaPropertyMgr
 public:
-	virtual IClientAlphaProperty *CreateClientAlphaProperty( IClientUnknown *pUnknown );
-	virtual void DestroyClientAlphaProperty( IClientAlphaProperty *pAlphaProperty );
+	virtual IClientAlphaProperty *CreateClientAlphaProperty( IClientUnknown *pUnknown ) override;
+	virtual void DestroyClientAlphaProperty( IClientAlphaProperty *pAlphaProperty ) override;
 
 // Methods of IClientLeafSystem
 public:

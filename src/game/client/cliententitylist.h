@@ -108,20 +108,20 @@ public:
 // Implement IClientEntityList
 public:
 
-	virtual IClientNetworkable*	GetClientNetworkable( int entnum );
-	virtual EntityCacheInfo_t	*GetClientNetworkableArray();
-	virtual IClientEntity*		GetClientEntity( int entnum );
+	virtual IClientNetworkable*	GetClientNetworkable( int entnum ) override;
+	virtual EntityCacheInfo_t	*GetClientNetworkableArray() override;
+	virtual IClientEntity*		GetClientEntity( int entnum ) override;
 
-	virtual int					NumberOfEntities( bool bIncludeNonNetworkable = false );
+	virtual int					NumberOfEntities( bool bIncludeNonNetworkable = false ) override;
 
-	virtual IClientUnknown*		GetClientUnknownFromHandle( ClientEntityHandle_t hEnt );
-	virtual IClientNetworkable*	GetClientNetworkableFromHandle( ClientEntityHandle_t hEnt );
-	virtual IClientEntity*		GetClientEntityFromHandle( ClientEntityHandle_t hEnt );
+	virtual IClientUnknown*		GetClientUnknownFromHandle( ClientEntityHandle_t hEnt ) override;
+	virtual IClientNetworkable*	GetClientNetworkableFromHandle( ClientEntityHandle_t hEnt ) override;
+	virtual IClientEntity*		GetClientEntityFromHandle( ClientEntityHandle_t hEnt ) override;
 
-	virtual int					GetHighestEntityIndex( void );
+	virtual int					GetHighestEntityIndex( void ) override;
 
-	virtual void				SetMaxEntities( int maxents );
-	virtual int					GetMaxEntities( );
+	virtual void				SetMaxEntities( int maxents ) override;
+	virtual int					GetMaxEntities( ) override;
 
 
 // CBaseEntityList overrides.

@@ -32,8 +32,8 @@ public:
 					CPrediction( void );
 	virtual			~CPrediction( void );
 
-	virtual void	Init( void );
-	virtual void	Shutdown( void );
+	virtual void	Init( void ) override;
+	virtual void	Shutdown( void ) override;
 
 // Implement IPrediction
 public:
@@ -44,13 +44,13 @@ public:
 						bool validframe,		// Is frame data valid
 						int incoming_acknowledged, // Last command acknowledged to have been run by server (un-modded)
 						int outgoing_command	// Last command (most recent) sent to server (un-modded)
-					);
+					) override;
 
-	virtual void	OnReceivedUncompressedPacket( void );
+	virtual void	OnReceivedUncompressedPacket( void ) override;
 
-	virtual void	PreEntityPacketReceived( int commands_acknowledged, int current_world_update_packet );
-	virtual void	PostEntityPacketReceived( void );
-	virtual void	PostNetworkDataReceived( int commands_acknowledged );
+	virtual void	PreEntityPacketReceived( int commands_acknowledged, int current_world_update_packet ) override;
+	virtual void	PostEntityPacketReceived( void ) override;
+	virtual void	PostNetworkDataReceived( int commands_acknowledged ) override;
 
 	virtual bool	InPrediction( void ) const;
 	virtual bool	IsFirstTimePredicted( void ) const;
@@ -70,13 +70,13 @@ public:
 	}
 
 	// The engine needs to be able to access a few predicted values
-	virtual void	GetViewOrigin( Vector& org );
-	virtual void	SetViewOrigin( Vector& org );
-	virtual void	GetViewAngles( QAngle& ang );
-	virtual void	SetViewAngles( QAngle& ang );
+	virtual void	GetViewOrigin( Vector& org ) override;
+	virtual void	SetViewOrigin( Vector& org ) override;
+	virtual void	GetViewAngles( QAngle& ang ) override;
+	virtual void	SetViewAngles( QAngle& ang ) override;
 
-	virtual void	GetLocalViewAngles( QAngle& ang );
-	virtual void	SetLocalViewAngles( QAngle& ang );
+	virtual void	GetLocalViewAngles( QAngle& ang ) override;
+	virtual void	SetLocalViewAngles( QAngle& ang ) override;
 
 	virtual void	CheckMovingGround( C_BasePlayer *player, double frametime );
 	virtual void	RunCommand( C_BasePlayer *player, CUserCmd *ucmd, IMoveHelper *moveHelper );

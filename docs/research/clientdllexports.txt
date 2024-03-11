@@ -1,13 +1,21 @@
-GameClientExports001+
+GameClientExports001+ // TODO
+
 VClientDllSharedAppSystems001+
-GameMovement001+
+
+GameMovement001+ // TODO
+
 VClientPrediction001+
-VClient016+ // TODO
 VCLIENTMATERIALSYSTEM001+
 IEffects001+
+
 VCLIENTTOOLS001+ // TODO
-VParticleSystemQuery004 // TODO
+
 VClientEntityList003+
-ClientRenderTargets001 // TODO
-ClientLeafSystem002+
+ClientRenderTargets001+
+
+ClientLeafSystem002+ // TODO
+
 ClientAlphaPropertyMgrV001+
+
+VClient016+ // TODO
+VParticleSystemQuery004+ // TODO

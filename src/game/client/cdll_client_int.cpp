@@ -444,15 +444,15 @@ public:
 		AddAppSystem( "scenefilecache" DLL_EXT_STRING, SCENE_FILE_CACHE_INTERFACE_VERSION );
 	}
 
-	virtual int	Count()
+	virtual int	Count() override
 	{
 		return m_Systems.Count();
 	}
-	virtual char const *GetDllName( int idx )
+	virtual char const *GetDllName( int idx ) override
 	{
 		return m_Systems[ idx ].m_pModuleName;
 	}
-	virtual char const *GetInterfaceName( int idx )
+	virtual char const *GetInterfaceName( int idx ) override
 	{
 		return m_Systems[ idx ].m_pInterfaceName;
 	}
@@ -2626,3 +2626,37 @@ CSteamID GetSteamIDForPlayerIndex( int iPlayerIndex )
 }
 
 #endif
+
+extern IViewRender *view;
+
+//-----------------------------------------------------------------------------
+// Purpose: interface from materialsystem to client, currently just for recording into tools
+//-----------------------------------------------------------------------------
+class CClientMaterialSystem : public IClientMaterialSystem
+{
+	virtual HTOOLHANDLE GetCurrentRecordingEntity() override
+	{
+		if ( !ToolsEnabled() )
+			return HTOOLHANDLE_INVALID;
+
+		if ( !clienttools->IsInRecordingMode() )
+			return HTOOLHANDLE_INVALID;
+
+		C_BaseEntity *pEnt = view->GetCurrentlyDrawingEntity();
+		if ( !pEnt || !pEnt->IsToolRecording() )
+			return HTOOLHANDLE_INVALID;
+
+		return pEnt->GetToolHandle();
+	}
+	virtual void PostToolMessage( HTOOLHANDLE hEntity, KeyValues *pMsg ) override
+	{
+		ToolFramework_PostToolMessage( hEntity, pMsg );
+	}
+};
+
+//-----------------------------------------------------------------------------
+// Singleton instance
+//-----------------------------------------------------------------------------
+static CClientMaterialSystem s_ClientMaterialSystem;
+IClientMaterialSystem *g_pClientMaterialSystem = &s_ClientMaterialSystem;
+EXPOSE_SINGLE_INTERFACE_GLOBALVAR( CClientMaterialSystem, IClientMaterialSystem, VCLIENTMATERIALSYSTEM_INTERFACE_VERSION, s_ClientMaterialSystem );

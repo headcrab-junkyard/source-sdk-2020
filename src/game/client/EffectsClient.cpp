@@ -26,20 +26,20 @@ public:
 		int nHaloIndex, unsigned char frameStart, unsigned char frameRate,
 		float flLife, unsigned char width, unsigned char endWidth, unsigned char fadeLength, 
 		unsigned char noise, unsigned char red, unsigned char green,
-		unsigned char blue, unsigned char brightness, unsigned char speed);
-	virtual void Smoke( const Vector &origin, int modelIndex, float scale, float framerate );
-	virtual void Sparks( const Vector &position, int nMagnitude = 1, int nTrailLength = 1, const Vector *pvecDir = NULL );
-	virtual void Dust( const Vector &pos, const Vector &dir, float size, float speed );
-	virtual void MuzzleFlash( const Vector &origin, const QAngle &angles, float fScale, int type );
-	virtual void MetalSparks( const Vector &position, const Vector &direction ); 
-	virtual void EnergySplash( const Vector &position, const Vector &direction, bool bExplosive = false );
-	virtual void Ricochet( const Vector &position, const Vector &direction );
+		unsigned char blue, unsigned char brightness, unsigned char speed) override;
+	virtual void Smoke( const Vector &origin, int modelIndex, float scale, float framerate ) override;
+	virtual void Sparks( const Vector &position, int nMagnitude = 1, int nTrailLength = 1, const Vector *pvecDir = NULL ) override;
+	virtual void Dust( const Vector &pos, const Vector &dir, float size, float speed ) override;
+	virtual void MuzzleFlash( const Vector &origin, const QAngle &angles, float fScale, int type ) override;
+	virtual void MetalSparks( const Vector &position, const Vector &direction ) override; 
+	virtual void EnergySplash( const Vector &position, const Vector &direction, bool bExplosive = false ) override;
+	virtual void Ricochet( const Vector &position, const Vector &direction ) override;
 
 	// FIXME: Should these methods remain in this interface? Or go in some 
 	// other client-server neutral interface?
-	virtual float Time();
-	virtual bool IsServer();
-	virtual void SuppressEffectsSounds( bool bSuppress );
+	virtual float Time() override;
+	virtual bool IsServer() override;
+	virtual void SuppressEffectsSounds( bool bSuppress ) override;
 
 private:
 	//-----------------------------------------------------------------------------
